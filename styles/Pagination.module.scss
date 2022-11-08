@@ -1,0 +1,68 @@
+@import "styles/variables.scss";
+
+.followers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 80px;
+}
+
+.follower {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 3px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 3px 1px rgba(255, 255, 255, 0.2);
+  & p {
+    margin: 2px 0px;
+  }
+  & img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  & button {
+    padding: 4px 16px;
+    background-color: white;
+    color: $primary-color;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+  }
+}
+
+.pagination {
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  gap: 2px;
+}
+
+.pagination-btn {
+  padding: 4px 8px;
+  background-color: white;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+}
+
+.focus {
+  background-color: rgb(37, 72, 185);
+  color: white;
+}
+
+.arrow {
+  background-color: $primary-color;
+  color: white;
+  &:hover {
+    transform: scale(1) !important;
+  }
+  &:focus {
+    background-color: $primary-color;
+  }
+}
+
+.pagination .pagination-btn:hover {
+  transform: scale(1.1);
+}
